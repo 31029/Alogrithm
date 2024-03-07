@@ -2,6 +2,24 @@ package array
 
 
 func RemoveElement(nums []int, val int) int {
+	/* 标准快、慢指针方法 */
+	slow := 0	//慢指针：指向更新 新数组下标的位置
+	fast := 0	//快指针：寻找新数组的元素 ，新数组就是不含有目标元素的数组
+
+	for fast < len(nums) {
+		if nums[fast] != val {
+			nums[slow] = nums[fast]
+			slow++
+		}
+		fast ++ 
+	}
+
+	return slow
+}
+
+
+func RemoveElement_myself(nums []int, val int) int {
+	/* 自己的方法 */
 	count := 0
 	moveIndex := 0
 
@@ -27,6 +45,7 @@ func RemoveElement(nums []int, val int) int {
 }
 
 
+/* 失败的快、慢指针方法 */
 func swap(nums []int, left int, right int)  {
 	temp := nums[left]
 	nums[left] = nums[right]
@@ -34,7 +53,8 @@ func swap(nums []int, left int, right int)  {
 }
 
 
-func RemoveElement1(nums []int, val int) int {
+func RemoveElement_failed(nums []int, val int) int {
+	/* 失败的快、慢指针方法 */
 	left := 0
 	right := left + 1
 
@@ -53,11 +73,6 @@ func RemoveElement1(nums []int, val int) int {
 			count ++
 		}
 	}
-	
-	for i := 0; i < count; i++ {
-		
-	}
-
 
 	for left < len(nums) && right < len(nums){
 		if nums[left] != val {
