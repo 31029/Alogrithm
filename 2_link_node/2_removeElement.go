@@ -11,10 +11,12 @@ func RemoveElements(head *ListNode, val int) *ListNode {
 	for cur_p != nil {
 		if cur_p.Val == val {
 			if cur_p == pre_p {
+				// 移除头节点
 				head = head.Next
 				cur_p = head
 				pre_p = head
 			} else {
+				// 移除其他节点
 				pre_p.Next = cur_p.Next
 				cur_p = cur_p.Next
 			}
