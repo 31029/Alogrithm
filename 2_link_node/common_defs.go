@@ -20,7 +20,7 @@ func MakeLinkList(array []int) *ListNode {
 	return head
 }
 
-func PringLinkList(head *ListNode) string {
+func PringLinkList(head *MyLinkedList) string {
 	var s string
 	for head != nil {
 		s += fmt.Sprintf("%d -> ", head.Val)

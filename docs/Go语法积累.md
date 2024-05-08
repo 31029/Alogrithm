@@ -8,6 +8,7 @@
 
 - 优秀博客
   - [【入门】Go语言指针详解 - 乱七八糟博客备份 - 博客园 ](https://www.cnblogs.com/qinziteng/p/17280926.html)
+  - [指针定义、指针特点、空指针、指针数组、指向指针的指针、指针作为函数入参_go的 指针数组实体定义- CSDN](https://blog.csdn.net/wohu1104/article/details/99694277)
 
 
 
