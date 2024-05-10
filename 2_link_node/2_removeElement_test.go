@@ -9,5 +9,5 @@ func TestRemoveElement(t *testing.T) {
 	head := MakeLinkList(init_array)
 	head = RemoveElements(head, 7)
 
-	//t.Logf("%s", PringLinkList(head))
+	t.Logf("%s", PringLinkList2(head))
 }

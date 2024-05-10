@@ -28,3 +28,12 @@ func PringLinkList(head *MyLinkedList) string {
 	}
 	return s
 }
+
+func PringLinkList2(head *ListNode) string {
+	var s string
+	for head != nil {
+		s += fmt.Sprintf("%d -> ", head.Val)
+		head = head.Next
+	}
+	return s
+}
