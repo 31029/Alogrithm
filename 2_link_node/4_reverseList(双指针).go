@@ -2,7 +2,7 @@ package linknode
 
 func ReverseList(head *ListNode) *ListNode {
 	// 数组法：用数组记录每个Listnode的地址，然后反向遍历
-	// 双指针法：设置pre和cur双指针，再用一个temp指针记录下一个待处理节点，后从第一个开始，一个一个取反。
+	// 双指针法：设置pre和cur双指针，再用一个temp指针记录下一个待处理节点，之后从第一个开始，一个一个取反。
 	var ptr_list []*ListNode
 	if head == nil {
 		return nil
