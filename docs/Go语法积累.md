@@ -4,11 +4,16 @@
 
 ### 一、基本数据类型
 
-#### 1、 指针类型
+#### 1、指针类型
 
 - 优秀博客
   - [【入门】Go语言指针详解 - 乱七八糟博客备份 - 博客园 ](https://www.cnblogs.com/qinziteng/p/17280926.html)
   - [指针定义、指针特点、空指针、指针数组、指向指针的指针、指针作为函数入参_go的 指针数组实体定义- CSDN](https://blog.csdn.net/wohu1104/article/details/99694277)
+
+#### 2、字符串类型
+
+- 优秀博客
+  - [Go语言字符串综合指南：函数、方法和最佳实践_go语言 字符串-CSDN博客](https://blog.csdn.net/walkskyer/article/details/135093920)
 
 
 
@@ -66,3 +71,18 @@ var ptr = &name
 以上就是Go语言中初始化变量的几种常见方式。
 ```
 
+
+
+
+
+### 三、常用库
+
+#### 1、fmt 标准输出库
+
+① **`fmt.printf`**
+
+- [golang fmt.printf() - 码农骆驼 - 博客园](https://www.cnblogs.com/rxbook/p/7085783.html)
+
+
+
+#### 2、sort 库
