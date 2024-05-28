@@ -15,6 +15,19 @@
 - 优秀博客
   - [Go语言字符串综合指南：函数、方法和最佳实践_go语言 字符串-CSDN博客](https://blog.csdn.net/walkskyer/article/details/135093920)
 
+#### 3、数学类型
+
+- 优秀博客
+  - [如何在Go中使用操作符进行数学运算_go 浮点数和整数乘法-CSDN博客](https://blog.csdn.net/QIU176161650/article/details/133672895)
+
+#### 4、`常用技巧`
+
+##### ① 数据类型相互转化
+
+- [go语言string、int、int64、float64、complex 互相转换](https://studygolang.com/articles/13139)
+
+
+
 
 
 ### 二、变量
