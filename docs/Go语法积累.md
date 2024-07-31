@@ -4,20 +4,22 @@
 
 ### 一、基本数据类型
 
+[go 基本数据类型 | 关键字类型 博客园 (cnbl](https://www.cnblogs.com/dev-shi/p/12421077.html)
+
 #### 1、指针类型
 
-- 优秀博客
+- **`优秀博客`**
   - [【入门】Go语言指针详解 - 乱七八糟博客备份 - 博客园 ](https://www.cnblogs.com/qinziteng/p/17280926.html)
   - [指针定义、指针特点、空指针、指针数组、指向指针的指针、指针作为函数入参_go的 指针数组实体定义- CSDN](https://blog.csdn.net/wohu1104/article/details/99694277)
 
 #### 2、字符串类型
 
-- 优秀博客
+- **`优秀博客`**
   - [Go语言字符串综合指南：函数、方法和最佳实践_go语言 字符串-CSDN博客](https://blog.csdn.net/walkskyer/article/details/135093920)
 
 #### 3、数学类型
 
-- 优秀博客
+- **`优秀博客`**
   - [如何在Go中使用操作符进行数学运算_go 浮点数和整数乘法-CSDN博客](https://blog.csdn.net/QIU176161650/article/details/133672895)
 
 #### 4、`常用技巧`
@@ -30,7 +32,17 @@
 
 
 
-### 二、变量
+### 二、复合类型
+
+#### 1、数组、切片
+
+- [Go 切片常用操作与使用技巧_go 切片操作-CSDN博客](https://blog.csdn.net/u014082714/article/details/139151999)
+
+
+
+
+
+### 三、其他
 
 #### 1、变量初始化
 
@@ -88,7 +100,7 @@ var ptr = &name
 
 
 
-### 三、常用库
+### 四、常用库
 
 #### 1、fmt 标准输出库
 
