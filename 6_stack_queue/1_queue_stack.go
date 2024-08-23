@@ -1,27 +1,27 @@
 package stack_queue
 
-type MyQueue struct {
-	stack_first MyStack
-	stack_last  MyStack
+type IntQueue struct {
+	stack_first IntStack
+	stack_last  IntStack
 	len         int
 }
 
-func Constructor() MyQueue {
-	return MyQueue{
-		stack_first: StackConstructor(),
-		stack_last:  StackConstructor(),
+func IntQueueConstructor() IntQueue {
+	return IntQueue{
+		stack_first: IntStackConstructor(),
+		stack_last:  IntStackConstructor(),
 		len:         0,
 	}
 }
 
-func (q *MyQueue) Push(x int) {
+func (q *IntQueue) Push(x int) {
 	q.stack_first.Push(x)
 	q.len += 1
 }
 
-func (q *MyQueue) Pop() int {
+func (q *IntQueue) Pop() int {
 	if q.Empty() {
-		return -1
+		return -999
 	}
 
 	oldLen := q.stack_first.len
@@ -37,9 +37,9 @@ func (q *MyQueue) Pop() int {
 	return result
 }
 
-func (q *MyQueue) Peek() int {
+func (q *IntQueue) Peek() int {
 	if q.Empty() {
-		return -1
+		return -999
 	}
 	oldLen := q.stack_first.len
 	for i := 0; i < oldLen; i++ {
@@ -52,12 +52,28 @@ func (q *MyQueue) Peek() int {
 	return result
 }
 
-func (q *MyQueue) Empty() bool {
+func (q *IntQueue) PopBottom() int {
+	if q.Empty() {
+		return -999
+	}
+	q.len -= 1
+	return q.stack_first.Pop()
+}
+
+
+func (q *IntQueue) Bottom() int {
+	if q.Empty() {
+		return -999
+	}
+	return q.stack_first.Peek()
+}
+
+func (q *IntQueue) Empty() bool {
 	return q.len == 0
 }
 
 /**
- * Your MyQueue object will be instantiated and called as such:
+ * Your IntQueue object will be instantiated and called as such:
  * obj := Constructor();
  * obj.Push(x);
  * param_2 := obj.Pop();

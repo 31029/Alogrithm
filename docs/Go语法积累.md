@@ -2,9 +2,13 @@
 
 ## 基础语法
 
+
+
 ### 一、基本数据类型
 
-[go 基本数据类型 | 关键字类型 博客园 (cnbl](https://www.cnblogs.com/dev-shi/p/12421077.html)
+[The Go Programming Language Specification - The Go Programming Language](https://go.dev/ref/spec#Types)
+
+[go 基本数据类型、关键字、内建函数、内建常量   --  博客园](https://www.cnblogs.com/dev-shi/p/12421077.html)
 
 #### 1、指针类型
 
