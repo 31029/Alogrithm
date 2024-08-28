@@ -1,6 +1,6 @@
 package dualPointer
 
-func reverseString(s []byte) {
+func ReverseString(s []byte) {
 	left := 0
 	right := len(s) - 1
 
