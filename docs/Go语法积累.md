@@ -42,7 +42,9 @@
 
 - [Go 切片常用操作与使用技巧_go 切片操作-CSDN博客](https://blog.csdn.net/u014082714/article/details/139151999)
 
+#### 2、结构体
 
+- [golang interface{} 和 struct{} - 多课网，360度全方位IT技术服务站！ (duoke360.com)](https://www.duoke360.com/post/5883)
 
 
 
