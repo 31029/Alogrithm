@@ -11,6 +11,7 @@ func ThreeSum(nums []int) [][]int {
 	result := [][]int{}
 	utils.BubbleSort(nums)
 
+	// [-4, -1, -1, 0, 1, 2]
 	for i := 0; i < len(nums)-2; i++ {
 		// 提前结束
 		if nums[i] > 0 {
