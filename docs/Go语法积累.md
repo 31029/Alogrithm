@@ -2,8 +2,6 @@
 
 ## 基础语法
 
-
-
 ### 一、基本数据类型
 
 [The Go Programming Language Specification - The Go Programming Language](https://go.dev/ref/spec#Types)
@@ -14,7 +12,6 @@
 
 - **`优秀博客`**
   - [【入门】Go语言指针详解 - 乱七八糟博客备份 - 博客园 ](https://www.cnblogs.com/qinziteng/p/17280926.html)
-  - [指针定义、指针特点、空指针、指针数组、指向指针的指针、指针作为函数入参_go的 指针数组实体定义- CSDN](https://blog.csdn.net/wohu1104/article/details/99694277)
 
 #### 2、字符串类型
 
@@ -48,7 +45,20 @@
 
 
 
-### 三、其他
+### 三、函数
+
+#### 1、形参、实参
+
+- **Go语言中slice，map这三种类型的实现机制类似指针**，所以可以直接传递，而不用取地址后传递指针。（注：若函数需改变slice的长度，则仍需要取地址传递指针）
+  - [Golang语言基础教程：函数的参数 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/68049307)
+
+
+
+#### 2、函数调用栈
+
+
+
+### Ⅰ、其他
 
 #### 1、变量初始化
 
@@ -106,9 +116,9 @@ var ptr = &name
 
 
 
-### 四、常用库
+### Ⅱ、常用库
 
-#### 1、fmt 标准输出库
+#### 1、fmt
 
 ① **`fmt.printf`**
 
@@ -116,4 +126,10 @@ var ptr = &name
 
 
 
-#### 2、sort 库
+#### 2、sort
+
+
+
+#### 3、container
+
+- [精通Go：container库的全面解析与实战应用_go container-CSDN博客](https://blog.csdn.net/walkskyer/article/details/135670678)
