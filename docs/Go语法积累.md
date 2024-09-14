@@ -118,7 +118,7 @@ var ptr = &name
 
 ### Ⅱ、常用库
 
-#### 1、fmt
+#### 1、标准库：fmt
 
 ① **`fmt.printf`**
 
@@ -126,10 +126,10 @@ var ptr = &name
 
 
 
-#### 2、sort
+#### 2、标准库：sort
 
 
 
-#### 3、container
+#### 3、标准库：container
 
 - [精通Go：container库的全面解析与实战应用_go container-CSDN博客](https://blog.csdn.net/walkskyer/article/details/135670678)
