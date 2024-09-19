@@ -1,6 +1,10 @@
 package dualPointer
 
-func detectCycle(head *ListNode) *ListNode {
+import (
+	linknode "github.com/h31029/alogrithm/2_Linknode"
+)
+
+func detectCycle(head *linknode.ListNode) *linknode.ListNode {
 	low, fast := head, head
 	for fast != nil {
 		low = low.Next

@@ -3,6 +3,8 @@ package dualPointer
 // " the sky is blue  "
 func ReverseWords(s string) string {
 	// 快慢指针：移除前面、中间、后面存在的多余空格 !!!
+	// 之后的思路：整个反转字符串之后再逐一反转其中单词。
+	// 个人觉得hashmap的思路更加清晰。
 	b := []byte(s)
     slow := 0
     for i := 0; i < len(b); i++ {
@@ -23,20 +25,23 @@ func ReverseWords(s string) string {
 	// 最后剪裁
     b = b[0:slow]
 
-	sb := b 
-	ReverseString(sb)
-	s = string(sb)
+	// 先整个反转
+	ReverseString(b)
+	s = string(b)
 
+	// 再逐一反转其中每一个单词
 	slow, fast := 0, 0
-	for fast < len(sb) {
+	for fast < len(b) {
 		if s[fast] == ' ' {	
-			ReverseString(sb[slow: fast])
+			ReverseString(b[slow: fast])
 			fast ++
 			slow = fast
 			continue
 		}
 		fast ++ 
 	}
-	ReverseString(sb[slow: fast])
-	return string(sb)
+
+	// 反转最后一个单词
+	ReverseString(b[slow: fast])
+	return string(b)
 }

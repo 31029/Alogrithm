@@ -8,14 +8,21 @@ type ListNode struct {
 }
 
 func MakeLinkList(array []int) *ListNode {
-	var head *ListNode = &ListNode{}
-	cur_p := head
-	for k, v := range array {
-		cur_p.Val = v
-		if k != len(array)-1 {
-			cur_p.Next = &ListNode{}
+	if len(array) == 0 {
+		return nil
+	}
+	head := &ListNode{
+		Val: array[0],
+		Next: nil,
+	}
+
+	cur := head
+	for _, v := range array[1:] {
+		cur.Next = &ListNode{
+			Val: v,
+			Next: nil,
 		}
-		cur_p = cur_p.Next
+		cur = cur.Next
 	}
 	return head
 }

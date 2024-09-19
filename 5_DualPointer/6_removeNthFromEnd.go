@@ -1,6 +1,11 @@
 package dualPointer
 
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
+import (
+	linknode "github.com/h31029/alogrithm/2_Linknode"
+)
+
+
+func removeNthFromEnd(head *linknode.ListNode, n int) *linknode.ListNode {
 	len := 0
 	temp := head
 	for temp.Next != nil {

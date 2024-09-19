@@ -1,7 +1,10 @@
 package dualPointer
 
+import (
+	linknode "github.com/h31029/alogrithm/2_Linknode"
+)
 
-func getIntersectionNode(headA, headB *ListNode) *ListNode {
+func getIntersectionNode(headA, headB *linknode.ListNode) *linknode.ListNode {
 	lA, lB := 0, 0
 	cA, cB := headA, headB
 	for cA != nil {
