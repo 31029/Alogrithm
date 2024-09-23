@@ -1,6 +1,6 @@
 package binarytree
 
-func preorderTraversal(root *TreeNode) []int {
+func PreorderTraversal(root *TreeNode) []int {
 	r := []int{}
 	recursionPreorder(root, &r)
 	return r
@@ -19,21 +19,21 @@ func recursionPreorder(root *TreeNode, nums *[]int) {
 	recursionPreorder(root.Right, nums)
 }
 
-func recursionInorder(root *TreeNode, nums []int) {
-	if root == nil {
-		return 
-	} 
-	recursionInorder(root.Left, nums)
-	// 此处append分配了新的内存空间，nums变为临时变量
-	nums = append(nums, root.Val)
-	recursionInorder(root.Right, nums)
-}
+// func recursionInorder(root *TreeNode, nums []int) {
+// 	if root == nil {
+// 		return 
+// 	} 
+// 	recursionInorder(root.Left, nums)
+// 	// 此处append分配了新的内存空间，nums变为临时变量
+// 	nums = append(nums, root.Val)
+// 	recursionInorder(root.Right, nums)
+// }
 
-func recursionPostorder(root *TreeNode, nums []int) {
-	if root == nil {
-		return 
-	} 
-	recursionPostorder(root.Left, nums)
-	recursionPostorder(root.Right, nums)
-	nums = append(nums, root.Val)
-}
+// func recursionPostorder(root *TreeNode, nums []int) {
+// 	if root == nil {
+// 		return 
+// 	} 
+// 	recursionPostorder(root.Left, nums)
+// 	recursionPostorder(root.Right, nums)
+// 	nums = append(nums, root.Val)
+// }
