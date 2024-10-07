@@ -1,6 +1,6 @@
 package linknode
 
-func RemoveNthFromEnd(head *ListNode, n int) *ListNode {
+func RemoveNthFromEnd2(head *ListNode, n int) *ListNode {
 	var ptr_list []*ListNode
 	if head == nil {
 		return nil

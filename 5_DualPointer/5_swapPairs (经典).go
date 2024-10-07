@@ -32,6 +32,7 @@ func SwapPairs(head *linknode.ListNode) *linknode.ListNode {
 			cur.Next = pre
 			break
 		} else {
+			// 中间节点处理
 			pre.Next = next.Next
 		}
 		cur.Next = pre
