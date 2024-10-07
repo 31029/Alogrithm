@@ -6,10 +6,9 @@ import "fmt"
 
 func main()  {
 	sn := []int{1, 2}
-	// sn1 := sn[2:]
-	// fmt.Printf("%v", len(sn1))
+	sn1 := sn[2:]
 
-	for k, v := range sn {
+	for k, v := range sn1 {
 		fmt.Printf("k:%v, v:%v \n", k, v)
 	}
 }
