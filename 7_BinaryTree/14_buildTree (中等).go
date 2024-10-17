@@ -17,23 +17,23 @@ func buildTree(inorder []int, postorder []int) *TreeNode {
 	return root
 }
 
-func buildTreeRecursion_Failed(root *TreeNode, LInorder, RInorder []int)  {
-	if len(LInorder) == 0 && len(RInorder) == 0 {
-		return
-	}
-	if len(LInorder) != 0 {
-		root.Left = &TreeNode{
-			Val: LInorder[len(LInorder)/2],
-		}
-		buildTreeRecursion(root.Left, LInorder[:len(LInorder)/2], LInorder[len(LInorder)/2 + 1:])
-	}
-	if len(RInorder) != 0 {
-		root.Right = &TreeNode{
-			Val: RInorder[len(RInorder)/2],
-		}
-		buildTreeRecursion(root.Right, RInorder[:len(RInorder)/2], RInorder[len(RInorder)/2 + 1:])
-	}
-}
+// func buildTreeRecursion_Failed(root *TreeNode, LInorder, RInorder []int)  {
+// 	if len(LInorder) == 0 && len(RInorder) == 0 {
+// 		return
+// 	}
+// 	if len(LInorder) != 0 {
+// 		root.Left = &TreeNode{
+// 			Val: LInorder[len(LInorder)/2],
+// 		}
+// 		buildTreeRecursion(root.Left, LInorder[:len(LInorder)/2], LInorder[len(LInorder)/2 + 1:])
+// 	}
+// 	if len(RInorder) != 0 {
+// 		root.Right = &TreeNode{
+// 			Val: RInorder[len(RInorder)/2],
+// 		}
+// 		buildTreeRecursion(root.Right, RInorder[:len(RInorder)/2], RInorder[len(RInorder)/2 + 1:])
+// 	}
+// }
 
 func buildTreeRecursion(root *TreeNode, LInorder, RInorder, LPostorder, RPostorder []int)  {
 	if len(LInorder) == 0 && len(RInorder) == 0 {

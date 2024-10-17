@@ -17,6 +17,7 @@ type LRUCache struct {
 	LRUListTail *BiLinkNode
 }
 
+// 可改用 container库的 List数据结构
 type BiLinkNode struct {
 	Key  int
 	Val  int
