@@ -1,12 +1,12 @@
 package binarytree
 
-func isBalanced(root *TreeNode) bool {
+func IsBalanced(root *TreeNode) bool {
 	if root == nil {
 		return true
 	}
 
-	bL := isBalanced(root.Left)
-	bR := isBalanced(root.Right)
+	bL := IsBalanced(root.Left)
+	bR := IsBalanced(root.Right)
 
 
 	dL := MaxDepth(root.Left)

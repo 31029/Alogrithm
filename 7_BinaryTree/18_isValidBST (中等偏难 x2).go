@@ -8,7 +8,7 @@ package binarytree
 节点的右子树只包含 大于 当前节点的数。
 所有左子树和右子树自身必须也是二叉搜索树。
 */
-func isValidBST(root *TreeNode) bool {
+func IsValidBST(root *TreeNode) bool {
 	// 思路：多返回值递归模式，需要保证子树递归地满足是BST的同时还要满足 root.Val > maxL && root.Val < minR。
 	if root == nil {
 		return false

@@ -5,20 +5,20 @@ import (
 	"strconv"
 )
 
-func binaryTreePathsRecursion(root *TreeNode, cur string, paths *[]string) {
+func BinaryTreePathsRecursion(root *TreeNode, cur string, paths *[]string) {
 	if root == nil {
 		*paths = append(*paths, cur)
 		return
 	}
 
 	cur = fmt.Sprintf("%s->", strconv.Itoa(root.Val)) 
-	binaryTreePathsRecursion(root.Left, cur, paths)
-	binaryTreePathsRecursion(root.Right, cur, paths)
+	BinaryTreePathsRecursion(root.Left, cur, paths)
+	BinaryTreePathsRecursion(root.Right, cur, paths)
 }
 
-func binaryTreePaths(root *TreeNode) []string {
+func BinaryTreePaths(root *TreeNode) []string {
 	cur := ""
 	res := []string{}
-	binaryTreePathsRecursion(root, cur, &res)
+	BinaryTreePathsRecursion(root, cur, &res)
 	return res
 }

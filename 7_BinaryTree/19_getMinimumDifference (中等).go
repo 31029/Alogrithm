@@ -54,7 +54,7 @@ func getMinimumDifferenceRecursion(root *TreeNode) (int, int, int) {
 	return minGap, min, max
 }
 
-func getMinimumDifference(root *TreeNode) int {
+func GetMinimumDifference(root *TreeNode) int {
     minGap, _, _ := getMinimumDifferenceRecursion(root)
     return minGap
 }

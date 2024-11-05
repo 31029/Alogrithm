@@ -1,19 +1,19 @@
 package binarytree
 
-func min(a, b int) int {
+func Min(a, b int) int {
 	if a >= b && b != -1{
 		return b
 	}
 	return a
 }
 
-func minDepth(root *TreeNode) int {
+func MinDepth(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
 	
-	mR := minDepth(root.Right)
-	mL := minDepth(root.Left)
+	mR := MinDepth(root.Right)
+	mL := MinDepth(root.Left)
 	
 	depth := 1 + min(mR, mL)
 	if root.Left == nil && root.Right != nil {

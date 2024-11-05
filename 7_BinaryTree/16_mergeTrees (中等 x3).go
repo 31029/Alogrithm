@@ -7,7 +7,7 @@ package binarytree
 你需要将这两棵树合并成一棵新二叉树。合并的规则是：如果两个节点重叠，那么将这两个节点的值相加作为合并后节点的新值；否则，不为 null 的节点将直接作为新二叉树的节点。
 返回合并后的二叉树。
 */
-func mergeTrees(root1 *TreeNode, root2 *TreeNode) *TreeNode {
+func MergeTrees(root1 *TreeNode, root2 *TreeNode) *TreeNode {
 	if root1 == nil && root2 == nil {
 		return nil
 	}

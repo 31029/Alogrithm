@@ -12,28 +12,28 @@ func findMaxIndex(nums []int) int {
 	return index
 }
 
-func constructMaximumBinaryTree(nums []int) *TreeNode {
+func ConstructMaximumBinaryTree(nums []int) *TreeNode {
 	index := findMaxIndex(nums)
 	root := &TreeNode{
 		Val: nums[index],
 	}
-	constructMaximumBinaryTreeRecursion(root, nums[:index], nums[index+1:])
+	ConstructMaximumBinaryTreeRecursion(root, nums[:index], nums[index+1:])
 	return root
 }
 
-func constructMaximumBinaryTreeRecursion(root *TreeNode, Lnums, Rnums []int){
+func ConstructMaximumBinaryTreeRecursion(root *TreeNode, Lnums, Rnums []int){
 	if len(Lnums) > 0 {
 		Lindex := findMaxIndex(Lnums)
 		root.Left = &TreeNode{
 			Val: Lnums[Lindex],
 		}
-		constructMaximumBinaryTreeRecursion(root.Left, Lnums[:Lindex], Lnums[Lindex+1:])
+		ConstructMaximumBinaryTreeRecursion(root.Left, Lnums[:Lindex], Lnums[Lindex+1:])
 	}
 	if len(Rnums) > 0 {
 		Rindex := findMaxIndex(Rnums)
 		root.Right = &TreeNode{
 			Val: Rnums[Rindex],
 		}
-		constructMaximumBinaryTreeRecursion(root.Right, Rnums[:Rindex], Rnums[Rindex+1:])
+		ConstructMaximumBinaryTreeRecursion(root.Right, Rnums[:Rindex], Rnums[Rindex+1:])
 	}
 }

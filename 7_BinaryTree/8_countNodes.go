@@ -1,12 +1,12 @@
 package binarytree
 
-func countNodes(root *TreeNode) int {
+func CountNodes(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
 
-	nR := countNodes(root.Right)
-	nL := countNodes(root.Left)
+	nR := CountNodes(root.Right)
+	nL := CountNodes(root.Left)
 
 	return nR + nL + 1
 }
