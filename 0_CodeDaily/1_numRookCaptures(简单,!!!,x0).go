@@ -16,7 +16,7 @@ func numRookCaptures(board [][]byte) int {
 	// 找到R的坐标
 	for row := range board {
 		for col, v := range board[row] {
-			if v == []byte("R")[0] {
+			if v == 'R' {
 				Rrow = row
 				Rcol = col
 			}
