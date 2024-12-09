@@ -3,5 +3,5 @@ package backtracking
 import "testing"
 
 func TestCombine(t * testing.T)  {
-	Combine(1, 1)
+	Combine(4, 2)
 }
