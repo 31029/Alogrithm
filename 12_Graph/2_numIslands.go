@@ -25,6 +25,30 @@ func numIslandsdfs(x, y int, grid [][]byte, visited [][]int) {
 	}
 }
 
+func numIslandsbfs(x, y int, grid [][]byte, visited [][]int) {
+	path := [][]int{[]int{x, y}}
+	for len(path) > 0 {
+		cur := (path)[0]
+		curx := cur[0]
+		cury := cur[1]
+		path = path[1:len(path)]
+
+		for i := 0; i < 4; i++ {
+			nextx := curx + dirction[i][0]
+			nexty := cury + dirction[i][1]
+			if nextx > len(grid[0])-1 || nextx < 0 || nexty > len(grid)-1 || nexty < 0 {
+				continue
+			}
+			if grid[nexty][nextx] == '0' || visited[nexty][nextx] == 1 {
+				continue
+			}
+			path = append(path, []int{nextx, nexty})
+			// 注意：加入队列则visited被标记为1，否则会导致超时或超出内存限制
+			visited[nexty][nextx] = 1
+		}
+	}
+}
+
 func numIslands(grid [][]byte) int {
 	count := 0
 	visited := [][]int{}
